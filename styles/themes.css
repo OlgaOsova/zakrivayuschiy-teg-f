@@ -4,3 +4,56 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --Themes-background: #FFF;
+    --Themes-mainColor: #000;
+    --main-font-weight: 700;
+    --text-font-weight: 400;
+    --pointer-color: #000;
+    --button-accent-color: #FFF;
+    --gradient-color: #D3D3D3;
+    --light-gragient-color: #E7E7E7;
+    --dark-gradient-color: #1A1A1A;
+    --heart-contour-color: #000;
+    --heart-body-color: #FF0000; 
+    --heart-core-color: #000;
+    --heart-sparks-color: #FF0000;
+    --floppy-color: #FFF;
+}
+
+:root.theme-dark {
+    --Themes-background: #000;
+    --Themes-mainColor: #00CC14;
+    --main-font-weight: 785;
+    --text-font-weight: 465;
+    --pointer-color: #00CC14;
+    --button-accent-color: #00CC14;
+    --gradient-color: #000;
+    --light-gragient-color: #007F0C;
+    --dark-gradient-color: #004306;
+    --heart-contour-color: #00CC14;
+    --heart-body-color: #FF0000; 
+    --heart-core-color: #00CC14;
+    --heart-sparks-color: #FF0000;
+    --floppy-color: #00CC14;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root.theme-auto {
+        --Themes-background: #000;
+        --Themes-mainColor: #00CC14;
+        --main-font-weight: 785;
+        --text-font-weight: 465;
+        --pointer-color: #00CC14;
+        --button-accent-color: #00CC14;
+        --gradient-color: #000;
+        --light-gragient-color: #007F0C;
+        --dark-gradient-color: #004306;
+        --heart-contour-color: #00CC14;
+        --heart-body-color: #FF0000; 
+        --heart-core-color: #00CC14;
+        --heart-sparks-color: #FF0000;
+        --floppy-color: #00CC14;
+    }
+}

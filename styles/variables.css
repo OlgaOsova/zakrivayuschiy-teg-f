@@ -1,1 +1,37 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --Themes-background: #FFF;
+    --Themes-mainColor: #000;
+    --title-font: 'Press Start 2P', monospace;
+    --main-font: 'Inter-Variable', sans-serif;
+    --page-padding: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
+    --title-font-size: clamp(3.0625rem, 2.1727rem + 2.0997vw, 4.0625rem);
+    --subtitle-font-size: clamp(0.875rem, 0.3745rem + 1.1811vw, 1.4375rem);
+    --text-font-size: 18px;
+    --label-font-size: 14px;
+    --button-font-size: 14px;
+    --title-font-weight: 400;
+    --main-font-weight: 700;
+    --text-font-weight: 400;
+    --title-text-transform: uppercase;
+    --label-text-transform: uppercase;
+    --pointer-color: #000;
+    --button-accent-color: #FFF;
+    --gradient-deg1: 90deg;
+    --gradient-deg2: 0deg;
+    --gradient-color: #D3D3D3;
+    --light-gragient-color: #E7E7E7;
+    --dark-gradient-color: #1A1A1A;
+    --heart-contour-color: #000;
+    --heart-body-color: #FF0000; 
+    --heart-core-color: #000;
+    --heart-sparks-color: #FF0000;
+    --floppy-color: #FFF;
+}
+
+@media (width < 376px) {
+    .page {
+        --page-padding: 0;
+    }
+}
