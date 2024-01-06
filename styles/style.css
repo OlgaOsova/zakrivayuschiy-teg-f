@@ -286,7 +286,7 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--Themes-mainColor, #000);
-  transition: 0.3s ease; 
+  transition: 0.3s ease;
 }
 
 .button__page:hover {
@@ -441,5 +441,5 @@
 
   .footer {
     padding-block-end: 102px;
-  }  
+  }
 }
