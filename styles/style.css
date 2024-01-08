@@ -22,14 +22,14 @@
   font-variation-settings: 'wght' var(--text-font-weight, 400);
   line-height: normal;
   background-color: var(--Themes-background, #FFF);
-  background-image: repeating-linear-gradient(var(--gradient-deg1, 90deg), var(--gradient-color, #D3D3D3) 0 2px, transparent 2px 4px), 
-  repeating-linear-gradient(var(--gradient-deg2, 0deg), var(--gradient-color, #D3D3D3) 0 2px, transparent 2px 4px),
-  linear-gradient(var(--light-gragient-color, #E7E7E7) 0%, var(--light-gragient-color, #E7E7E7) 0,01%, var(--dark-gradient-color, #1A1A1A) 100%);
+  background-image: repeating-linear-gradient(var(--gradient-deg, 90deg), var(--gradient-color, #D3D3D3) 0 2px, transparent 2px 4px), 
+  repeating-linear-gradient(var(--gradient-direction, to bottom), var(--gradient-color, #D3D3D3) 0 2px, transparent 2px 4px),
+  linear-gradient(var(--gradient-direction, to bottom), var(--light-gragient-color, #E7E7E7) 0.01%, var(--dark-gradient-color, #1A1A1A) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
   background-attachment: fixed;
-  padding-inline: var(--page-padding, clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem));
+  padding-inline: var(--page-padding, clamp(0rem, -8.184.9296vw, 23.25rem));
 }
 
 .header {
@@ -93,7 +93,7 @@
   animation: pointer 0.5s infinite ease-in-out reverse;
 }
 
-.theme-menu__button:hover, .theme-menu__button:disabled {
+.theme-menu__button:hover {
   opacity: 0.6;
   transition: 0.3s ease;
   cursor: pointer;
@@ -121,6 +121,8 @@
 }
 
 .theme-menu__button:disabled {
+  opacity: 0.6;
+  transition: 0.3s ease;
   pointer-events: none;
 }
 
@@ -323,10 +325,10 @@
   gap: 8px;
 }
 
-.button__dialog {
-  inline-size: 293px;
-  block-size: 38px;
-  text-transform: var(--title-text-transform, uppercase);
+.picture__floppy {
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
 }
 
 .dialog[open] {
@@ -346,6 +348,12 @@
   margin-block: 0 30px;
 }
 
+.dialog .picture__floppy {
+  scale: 1.86;
+  inset-inline-start: 20px;
+  inset-block-start: 27px;
+}
+
 .dialog__text {
   color: var(--Themes-mainColor, #000);
   font-family: var(--title-font, 'Press Start 2P', monospace);
@@ -355,16 +363,16 @@
   text-transform: var(--title-text-transform, uppercase);
 }
 
-.picture__floppy {
-  position: relative;
-  z-index: 3;
-  mix-blend-mode: difference;
-  }
+.button__dialog {
+  inline-size: 293px;
+  block-size: 38px;
+  text-transform: var(--title-text-transform, uppercase);
+}
 
-.dialog .picture__floppy {
-  scale: 1.86;
-  inset-inline-start: 20px;
-  inset-block-start: 27px;
+.button__dialog:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--Themes-mainColor, #000);
+  transition: 0.3s ease;
 }
 
 @media (width <= 678px) {

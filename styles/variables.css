@@ -18,8 +18,8 @@
   --label-text-transform: uppercase;
   --pointer-color: #000;
   --button-accent-color: #FFF;
-  --gradient-deg1: 90deg;
-  --gradient-deg2: 0deg;
+  --gradient-deg: 90deg;
+  --gradient-direction: to bottom;
   --gradient-color: #D3D3D3;
   --light-gragient-color: #E7E7E7;
   --dark-gradient-color: #1A1A1A;

@@ -26,10 +26,6 @@
   filter: opacity(0);
 }
 
-.contour {
-  fill: var(--heart-contour-color, #000);
-}
-
 .like-icon.is-liked .core {
   fill: var(--heart-body-color, #ff0000);
 }
@@ -40,21 +36,6 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart-body-color, #ff0000);
-}
-
-.like-icon.is-liked:active .core {
-  fill: var(--heart-body-color, #ff0000);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon.is-liked:active .main-body {
-  fill: var(--heart-body-color, #ff0000);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked:active .contour {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.3s linear 0.06s;
 }
 
 .card__icon-button:hover .core {
@@ -72,13 +53,50 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon .contour {
+.like-icon.is-liked:active .core {
+  fill: var(--heart-body-color, #ff0000);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon.is-liked:active .main-body {
+  fill: var(--heart-body-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked:active .contour {
+  fill: var(--heart-contour-color, #000);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked:hover .core {
+  fill: var(--heart-body-color, #ff0000);
+}
+
+.like-icon.is-liked:hover .main-body {
+  fill: var(--heart-body-color, #ff0000);
+}
+
+.like-icon.is-liked:hover .contour {
+  fill: var(--heart-body-color, #ff0000);
+}
+
+.card__icon-button .core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03;
+}
+
+.card__icon-button .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0.05;
+}
+
+.card__icon-button .contour {
   fill: var(--heart-contour-color, #000);
   transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .heart {
-  animation: heartPulse 0.3s ease-in 0.1s alternate;
+  animation: heartPulse 0.3s ease-in 0.1s reverse;
   transform-origin: center;
 }
 
@@ -92,7 +110,7 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: heartSparks 0.3s ease-in 0.3s alternate;
+  animation: heartSparks 0.3s ease-in 0.3s reverse;
 }
 
 @keyframes heartSparks {
